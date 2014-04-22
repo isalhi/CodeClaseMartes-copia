@@ -1,0 +1,37 @@
+<!-- START:head -->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- START_HIGHLIGHT -->
+  <title>Pragprog Books Online Store</title>
+<!-- END_HIGHLIGHT -->
+  <!-- <label id="code.slt"/> --><%= stylesheet_link_tag    "application", media: "all",
+    "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %><!-- <label id="code.jlt"/> -->
+  <%= csrf_meta_tags %><!-- <label id="code.csrf"/> -->
+</head>
+<!-- END:head -->
+<body class="<%= controller.controller_name %>">
+<!-- START_HIGHLIGHT -->
+  <div id="banner">
+    <%= image_tag("otro.jpg", size: "60") %>
+    <%= @page_title || "Depot Application (Ejemplo Clases)" %><!-- <label id="code.depot.e.title"/> -->
+  </div>
+  <div id="columns">
+    <div id="side">
+      <ul>
+        <li>Our company</li>
+        <li>Amazon</li>
+        <li>News</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+    <div id="main">
+<!-- END_HIGHLIGHT -->
+      <%= yield %><!-- <label id="code.depot.e.include"/> -->
+<!-- START_HIGHLIGHT -->
+    </div>
+  </div>
+<!-- END_HIGHLIGHT -->
+</body>
+</html>
